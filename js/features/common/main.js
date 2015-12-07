@@ -7,5 +7,7 @@
  *
  */
 import ui from './ui/main';
+import header from './Header/header';
+import sidebar from './Siderbar/sidebar';
 
-export default ui;
+export default [ui, header, sidebar];
