@@ -10,4 +10,4 @@ import ui from './ui/main';
 import header from './Header/header';
 import sidebar from './Siderbar/sidebar';
 
-export default [ui, header, sidebar];
+export default _.flatten([ui, header, sidebar]);

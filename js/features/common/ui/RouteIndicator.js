@@ -23,11 +23,11 @@ class Feature extends FeatureBase {
             '$rootScope',
             'Routes',
             function($rootScope, Routes) {
-                var classes = _.pluck(Routes, 'id').join(' ');
+                var classes = _.pluck(Routes, 'state').join(' ');
                 $rootScope.$on('$routeChangeSuccess', function(e, route) {
                     self.$body.removeClass(classes);
-                    if (route && route.$$route && route.$$route.id) {
-                        self.$body.addClass(route.$$route.id);
+                    if (route && route.$$route && route.$$route.state) {
+                        self.$body.addClass(route.$$route.state);
                     }
                 });
             }

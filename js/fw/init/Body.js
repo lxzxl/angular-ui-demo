@@ -12,7 +12,16 @@ import angular from 'angular';
 
 class Initializer extends InitBase {
     run() {
-        angular.element(document.body).append('<div ui-view autoscroll="true" class="main"></div>');
+        angular.element(document.body).append(`<div id="wrapper">
+    <!-- Navigation -->
+    <header></header>
+    <!-- /.navbar-top-links -->
+    <!-- /.navbar-static-side -->
+    <div id="page-wrapper" style="min-height: 561px;">
+        <div ui-view></div>
+    </div>
+    <!-- /#page-wrapper -->
+</div>`);
     }
 }
 

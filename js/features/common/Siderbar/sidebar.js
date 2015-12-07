@@ -4,24 +4,19 @@
 'use strict';
 import angular from 'angular';
 import FeatureBase from 'lib/FeatureBase';
-import sidebarTpl from './header.html';
+import sidebarTpl from './sidebar.html';
 
 class Feature extends FeatureBase {
 
     constructor() {
         super('SidebarModule');
-        this.$body = angular.element(document.body);
-    }
-
-    beforeStart() {
-        this.$body.prepend(tpl);
     }
 
     run() {
         this.mod.run([
             '$templateCache',
             function ($templateCache) {
-                $templateCache.put('sidebar', siderbarTpl);
+                $templateCache.put('sidebar', sidebarTpl);
             }
         ]);
         this.mod.directive('sidebar', ['$location', function () {

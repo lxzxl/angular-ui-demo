@@ -13,7 +13,6 @@ import FeatureBase from 'lib/FeatureBase';
 import Routes from './Routes';
 import HomeController from './controller/HomeController';
 import HomeService from './service/HomeService';
-import customTpl from './partials/custom.html';
 
 class Feature extends FeatureBase {
 
@@ -25,12 +24,9 @@ class Feature extends FeatureBase {
     run() {
         this.mod.controller('HomeController', HomeController);
         this.mod.service('HomeService', HomeService);
-        this.mod.run([
-            '$templateCache',
-            function($templateCache) {
-                $templateCache.put('customTpl', customTpl);
-            }
-        ]);
+        this.mod.run([function () {
+            
+        }]);
     }
 }
 

@@ -7,7 +7,7 @@ var webpack = require('webpack');
 gulp.task('release', function(callback) {
     var path = require('path');
     var replace = require('gulp-replace');
-    var config = require('./webpack.config.prod');
+    var config = require('./webpack.config.dev');
 
     require('rimraf').sync('build/');
 

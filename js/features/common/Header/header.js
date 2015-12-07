@@ -10,11 +10,6 @@ class Feature extends FeatureBase {
 
     constructor() {
         super('HeaderModule');
-        this.$body = angular.element(document.body);
-    }
-
-    beforeStart() {
-        this.$body.prepend(tpl);
     }
 
     run() {
