@@ -48,10 +48,15 @@ module.exports = {
         root: [
             path.resolve(__dirname),
             path.resolve(__dirname, 'js/'),
-            path.resolve(__dirname, 'js/fw/')
+            path.resolve(__dirname, 'js/fw/'),
+            path.resolve(__dirname, 'etc/')
         ]
     },
     plugins: [
+        new webpack.ProvidePlugin({
+            "window.jQuery": "jquery",
+            "moment": "moment"
+        }),
         new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
     ]
 };

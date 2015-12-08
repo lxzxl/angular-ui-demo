@@ -5,6 +5,7 @@
 import angular from 'angular';
 import FeatureBase from 'lib/FeatureBase';
 import headerTpl from './header.html';
+import headerNotificationTpl from './header-notification.html';
 
 class Feature extends FeatureBase {
 
@@ -17,11 +18,19 @@ class Feature extends FeatureBase {
             '$templateCache',
             function ($templateCache) {
                 $templateCache.put('header', headerTpl);
+                $templateCache.put('headerNotification', headerNotificationTpl);
             }
         ]);
         this.mod.directive('header', function () {
             return {
                 templateUrl: 'header',
+                restrict: 'E',
+                replace: true
+            }
+        });
+        this.mod.directive('headerNotification', function () {
+            return {
+                templateUrl: 'headerNotification',
                 restrict: 'E',
                 replace: true
             }

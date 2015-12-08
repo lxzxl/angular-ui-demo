@@ -16,7 +16,7 @@
   ],
   "keywords": [
     "es6",
-    "InternalTools"
+    "sb-admin-angular"
   ],
   "author": "steven <sli@movoto.com>",
   "license": "MIT",
@@ -31,7 +31,10 @@
     "angular-ui-router": "^0.2.15",
     "bootstrap": "^3.3.6",
     "bootstrap-additions": "0.3.1",
+    "font-awesome": "^4.5.0",
+    "jquery": "^2.1.4",
     "lodash": "^3.10.1",
+    "metismenu": "^2.2.0",
     "splash-screen": "^2.2.2",
     "startbootstrap-sb-admin-2": "^1.0.7"
   },
