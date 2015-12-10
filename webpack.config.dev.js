@@ -54,6 +54,7 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
+            $: 'jquery',
             "window.jQuery": "jquery",
             "moment": "moment"
         }),

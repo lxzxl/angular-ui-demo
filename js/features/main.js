@@ -8,6 +8,8 @@
 'use strict';
 import _ from 'lodash';
 import common from './common/main';
+import login from './login/main';
+import dashboard from './dashboard/main';
 import home from './home/main';
 
-export default _.flatten([common, home]);
+export default _.flatten([common, login, dashboard, home]);

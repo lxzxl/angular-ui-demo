@@ -11,14 +11,8 @@ import tpl from './partials/home.html';
 
 export default [{
     isDefault: true,
-    state: 'home',
-    url: '/',
+    state: 'dashboard.home',
+    url: '/home',
     template: tpl,
     controller: 'HomeController'
-}, {
-    state: 'home.login',
-    url: '/login',
-    template: tpl,
-    controller: 'HomeController'
-}
-];
+}];
