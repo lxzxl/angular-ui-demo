@@ -18,7 +18,7 @@ class Feature extends FeatureBase {
                 restrict: 'A',
                 link: function ($scope, element) {
                     var w = angular.element($window);
-                    w.bind('load resize', function () {
+                    w.off('load.pageWrapper resize.pageWrapper').on('load.pageWrapper resize.pageWrapper', function () {
                         var minHeight = angular.element($window).height() - element.offset().top;
                         if (minHeight < 1) minHeight = 1;
                         element.css("min-height", (minHeight) + "px");
