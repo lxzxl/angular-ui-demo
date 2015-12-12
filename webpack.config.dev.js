@@ -54,9 +54,9 @@ module.exports = {
     },
     plugins: [
         new webpack.ProvidePlugin({
-            $: 'jquery',
-            "window.jQuery": "jquery",
-            "moment": "moment"
+            //$: 'jquery',
+            //"window.jQuery": "jquery",
+            //"moment": "moment"
         }),
         new webpack.optimize.CommonsChunkPlugin('common.bundle.js')
     ]
