@@ -1,0 +1,123 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Notifications</h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Alert Styles
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <uib-alert type="success">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                </uib-alert>
+                <uib-alert type="info">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                </uib-alert>
+                <uib-alert type="warning">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                </uib-alert>
+                <uib-alert type="danger">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit.
+                </uib-alert>
+            </div>
+            <!-- .panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Dismissable Alerts
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body" ng-init="alerts=['danger','success']">
+                <uib-alert ng-repeat="alert in alerts" type="{{alert}}" close="alerts.splice($index,1)">
+                    Lorem ipsum dolor sit amet, consectetur adipisicingelit.
+                </uib-alert>
+            </div>
+            <!-- .panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Modals
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <!-- Button trigger modal -->
+                <button class="btn btn-primary btn-lg" ng-click="openModal()">
+                    Launch Demo Modal
+                </button>
+            </div>
+            <!-- .panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Tooltips and Popovers
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <h4>Tooltip Demo</h4>
+                <div class="tooltip-demo">
+                    <button type="button" uib-tooltip="Tooltip on left" tooltip-placement="left" class="btn btn-default" title="Tooltip on left">Tooltip on
+                        left
+                    </button>
+                    <button type="button" uib-tooltip="Tooltip on top" tooltip-placement="top" class="btn btn-default" title="Tooltip on top">Tooltip on top
+                    </button>
+                    <button type="button" uib-tooltip="Tooltip on bottom" tooltip-placement="bottom" class="btn btn-default" title="Tooltip on bottom">Tooltip
+                        on bottom
+                    </button>
+                    <button type="button" uib-tooltip="Tooltip on right" tooltip-placement="right" class="btn btn-default" title="Tooltip on right">Tooltip on
+                        right
+                    </button>
+
+                </div>
+                <br>
+                <br>
+                <h4>Clickable Popover Demo</h4>
+                <div class="tooltip-demo">
+                    <button type="button" class="btn btn-default" uib-popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                            popover-placement="left" popover-trigger="click">
+                        Popover on left
+                    </button>
+                    <button type="button" class="btn btn-default" uib-popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                            popover-placement="top" popover-trigger="click">
+                        Popover on top
+                    </button>
+                    <button type="button" class="btn btn-default" uib-popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                            popover-placement="bottom" popover-trigger="click">
+                        Popover on bottom
+                    </button>
+                    <button type="button" class="btn btn-default" uib-popover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."
+                            popover-placement="right" popover-trigger="click">
+                        Popover on right
+                    </button>
+                </div>
+            </div>
+            <!-- .panel-body -->
+        </div>
+        <!-- /.panel -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>

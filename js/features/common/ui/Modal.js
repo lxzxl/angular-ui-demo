@@ -6,13 +6,14 @@
  *
  */
 import FeatureBase from 'lib/FeatureBase';
+import tpl from './modal.html';
 
 var defaults = {
-    animation: 'am-fade',
-    placement: 'top',
-    html: false,
-    backdrop: true,
-    keyboard: true
+    animation: true,
+    //templateUrl: 'myModalContent.html',
+    template: tpl,
+    controller: 'ModalInstanceCtrl',
+    size: 'sm'
 };
 
 class Feature extends FeatureBase {
@@ -22,17 +23,22 @@ class Feature extends FeatureBase {
     }
 
     run() {
+        this.mod.controller('ModalInstanceCtrl', ['$scope', '$uibModalInstance', function ($scope, $uibModalInstance) {
+            $scope.ok = function () {
+                $uibModalInstance.close();
+            };
+
+            $scope.cancel = function () {
+                $uibModalInstance.dismiss('cancel');
+            };
+        }]);
         this.mod.run([
             'events',
             '$uibModal',
             function (events, $uibModal) {
                 events.on('modal', function (opts) {
-                    var options = _.defaults(opts, defaults);
-                    var modalScope = (opts.scope || $rootScope).$new();
-                    modalScope.title = opts.title;
-                    modalScope.content = opts.content;
-                    options.scope = modalScope;
-                    $uibModal.open(options);
+                    var options = _.defaults(opts || {}, defaults);
+                    var modalInstance = $uibModal.open(options);
                 });
 
             }
