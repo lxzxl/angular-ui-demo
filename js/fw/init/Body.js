@@ -12,7 +12,7 @@ import angular from 'angular';
 
 class Initializer extends InitBase {
     run() {
-        angular.element(document.body).append('<div ui-view autoscroll="true" class="main"></div>');
+        angular.element(document.body).append('<div ui-view></div>');
     }
 }
 

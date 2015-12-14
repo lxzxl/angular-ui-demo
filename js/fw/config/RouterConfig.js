@@ -55,9 +55,8 @@ class Configurator extends ConfiguratorBase {
             function ($locationProvider, $stateProvider, $urlRouterProvider) {
 
                 //config each router
-                _.each(routes, function (ro) {
-                    $stateProvider
-                        .state(ro.state, _.omit(ro, ['state']));
+                _.each(routes,  ro => {
+                    $stateProvider.state(ro.state, ro);
                 });
 
                 //config default page

@@ -1,29 +1,99 @@
 @import "../node_modules/angular-sweetnotifier/src/angular-sweetnotifier.less";
 @import "../node_modules/bootstrap/dist/css/bootstrap.css";
 @import "../node_modules/bootstrap-additions/dist/bootstrap-additions.css";
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/startbootstrap-sb-admin-2/dist/css/sb-admin-2.css";
+@import "../node_modules/metismenu/dist/metisMenu.css";
 @import "../node_modules/angular-motion/dist/angular-motion.css";
 @import "../node_modules/angular-theme-spinner/dist/angular-theme-spinner.min.css";
-
 @import "./variables";
-@import "./topnav";
-@import "./stTable";
-@import "./datapicker";
-@import "./footer";
 
-html,
-body{
-    height: 100%;
+/* Space out content a bit */
+body {
+  padding-bottom: 20px;
 }
 
-body{
-    min-height: 100vh;
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.main{
-    min-height: 100%;
-    padding-bottom: 45px;
-    margin-bottom: -45px;
-    > .container{
-        min-height: 100%;
-    }
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Customize container */
+@media (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.nav > li.active > a {
+  text-decoration: none;
+  background-color: #eee;
 }

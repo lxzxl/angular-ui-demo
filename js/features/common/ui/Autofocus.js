@@ -15,10 +15,10 @@ class Feature extends FeatureBase {
     }
 
     run() {
-        this.mod.directive('autofocus', function() {
+        this.mod.directive('autofocus', function () {
             return {
                 restrict: 'A',
-                link: function($scope, element) {
+                link: function ($scope, element) {
                     element[0].focus();
                 }
             };

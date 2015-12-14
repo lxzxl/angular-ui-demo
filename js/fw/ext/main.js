@@ -6,6 +6,7 @@
  *
  */
 'use strict';
+
 import 'angular-sanitize';
 import 'angular-ui-bootstrap';
 import 'angular-ui-router';
