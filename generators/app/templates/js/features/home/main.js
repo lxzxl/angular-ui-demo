@@ -3,8 +3,8 @@
  *
  *   Defines a home feature
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  * ******************************************************************************************************
  */

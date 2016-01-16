@@ -2,8 +2,8 @@
  *
  *  config.js which contains the configuration of app, and it should never be cached
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  **/
 'use strict';

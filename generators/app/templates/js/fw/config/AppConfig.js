@@ -3,8 +3,8 @@
  *  you have different stuff for each env
  *
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  */
 'use strict';

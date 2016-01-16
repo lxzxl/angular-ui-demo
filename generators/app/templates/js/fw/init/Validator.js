@@ -2,8 +2,8 @@
  *  Validate the features is loaded correctly
  *
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  */
 'use strict';

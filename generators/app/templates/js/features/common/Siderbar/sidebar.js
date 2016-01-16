@@ -1,5 +1,6 @@
 /**
- * Created by steven on 15/12/7.
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>.
  */
 'use strict';
 import angular from 'angular';

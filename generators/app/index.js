@@ -85,5 +85,40 @@ module.exports = generators.Base.extend({
             self.destinationRoot(path.join(self.destinationRoot(), self.answers.name));
             done();
         });
+    },
+    writing: function () {
+        var self = this;
+        var _ = require('lodash');
+
+        self.fs.copyTpl(self.templatePath('etc/config.js'), self.destinationPath('etc/config.js'), self.obj);
+        self.directory(self.templatePath('img'), self.destinationPath('img'));
+        self.directory(self.templatePath('js'), self.destinationPath('js'), function (body) {
+            return _.template(body, {
+                interpolate: /<%=([\s\S]+?)%>/g
+            })(self.obj);
+        });
+        self.directory(self.templatePath('less'), self.destinationPath('less'));
+        self.directory(self.templatePath('mock'), self.destinationPath('mock'));
+        self.directory(self.templatePath('test'), self.destinationPath('test'), function (body) {
+            return _.template(body, {
+                interpolate: /<%=([\s\S]+?)%>/g
+            })(self.obj);
+        });
+        self.copy(self.templatePath('gitignore'), self.destinationPath('.gitignore'));
+        self.copy(self.templatePath('gulpfile.js'), self.destinationPath('gulpfile.js'));
+        self.copy(self.templatePath('index.html'), self.destinationPath('index.html'));
+        self.fs.copyTpl(self.templatePath('_package.json'), self.destinationPath('package.json'), self.obj);
+        self.copy(self.templatePath('karma.conf.js'), self.destinationPath('karma.conf.js'));
+        self.copy(self.templatePath('webpack.config.test.js'), self.destinationPath('webpack.config.test.js'));
+        self.copy(self.templatePath('webpack.config.dev.js'), self.destinationPath('webpack.config.dev.js'));
+        self.copy(self.templatePath('webpack.config.prod.js'), self.destinationPath('webpack.config.prod.js'));
+    },
+    install: function () {
+        this.npmInstall(undefined, {
+            registry: this.answers.registry
+        });
+    },
+    end: function () {
+        this.log.ok('Project ' + this.answers.name + ' generated!!!');
     }
 });

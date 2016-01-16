@@ -1,7 +1,7 @@
 {
-  "name": "InternalTools",
+  "name": "<%= answers.name %>",
   "version": "1.0.0",
-  "description": "",
+  "description": "<%= answers.description %>",
   "files": [
     "etc",
     "img",
@@ -16,9 +16,10 @@
   ],
   "keywords": [
     "es6",
-    "sb-admin-angular"
+    "sb-admin-angular",
+    "<%= answers.name %>"
   ],
-  "author": "steven <sli@movoto.com>",
+  "author": "<%= answers.username %> <% if(answers.email){ %><<%= answers.email %>><% } %>",
   "license": "MIT",
   "dependencies": {
     "angular": "^1.4.8",
@@ -32,7 +33,6 @@
     "bootstrap": "^3.3.6",
     "bootstrap-additions": "0.3.1",
     "font-awesome": "^4.5.0",
-    "jquery": "^2.1.4",
     "lodash": "^3.10.1",
     "metismenu": "^2.2.0",
     "splash-screen": "^2.2.2",

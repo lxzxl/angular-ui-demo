@@ -1,5 +1,6 @@
 /**
- * Created by steven on 15/12/14.
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>.
  */
 import FeatureBase from 'lib/FeatureBase';
 import Routes from './Routes';

@@ -1,5 +1,6 @@
 /**
- * Created by steven on 15/12/14.
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>.
  */
 import buttonsTpl from './partials/buttons.html';
 import gridTpl from './partials/grid.html';

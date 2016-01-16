@@ -2,8 +2,8 @@
  *  Defines the Autofocus Module.
  *  This module used to override the original `autofocus` attribute since it doesn't work properly with ngRoute
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  */
 import FeatureBase from 'lib/FeatureBase';

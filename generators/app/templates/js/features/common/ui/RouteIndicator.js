@@ -2,8 +2,8 @@
  *
  *  Defines RouteIndicator service
  *
- *  @author  steven
- *  @date    Dec 7, 2015
+ *  @author  <%= answers.username %>
+ *  @date  <%= answers.date %>
  *
  */
 import _ from 'lodash';
